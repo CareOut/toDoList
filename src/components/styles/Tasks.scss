@@ -1,0 +1,43 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tasks {
+  padding: 100px 40px;
+  background-color: #38404b;
+}
+
+.tasks__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks__title {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #94adcf;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  cursor: pointer;
+}
+
+.tasks__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
