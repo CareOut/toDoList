@@ -5,7 +5,7 @@ import add from "../img/Add-icon.png";
 import burger from "../img/Burger-icon.png";
 import "../components/styles/Header.css";
 
-export default function Header({ task, setTask, addTask }) {
+export default function Header({ task, setTask, addTask, setVisible }) {
   return (
     <header className="header">
       <div className="container">
@@ -32,7 +32,7 @@ export default function Header({ task, setTask, addTask }) {
             </div>
           </div>
           <div className="header__add">
-            <img src={add} alt="" />
+            <img src={add} alt="" onClick={setVisible} />
           </div>
           <div className="header__burger">
             <img className="burger__icon" src={burger} alt="" />

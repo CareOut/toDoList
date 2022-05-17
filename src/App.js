@@ -10,10 +10,12 @@ function App() {
   const [taskList, setTaskList] = useState([]);
   const [completedTask, setCompletedTask] = useState({ id: "", text: "" });
   const [completedTaskList, setCompletedTaskList] = useState([]);
+  const [modal, setModal] = useState(false);
 
   const addTask = () => {
     setTaskList([...taskList, task]);
     setTask({ id: "", text: "" });
+    setModal(false);
   };
 
   const removeTask = (task) => {
@@ -29,10 +31,15 @@ function App() {
     setCompletedTask(task);
     setCompletedTaskList([...completedTaskList, completedTask]);
   };
-
+  const setVisible = () => setModal(true);
   return (
     <div className="App">
-      <Header task={task} setTask={setTask} addTask={addTask} />
+      <Header
+        task={task}
+        setTask={setTask}
+        addTask={addTask}
+        setVisible={setVisible}
+      />
       <Tasks
         taskList={taskList}
         task={task}
@@ -44,7 +51,7 @@ function App() {
         completedTask={completedTask}
         remove={removeCompletedTask}
       />
-      <Modal />
+      <Modal task={task} setTask={setTask} addTask={addTask} visible={modal} />
     </div>
   );
 }
