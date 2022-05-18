@@ -27,11 +27,12 @@ function App() {
   };
 
   const completeTask = (task) => {
-    setTaskList(taskList.filter((t) => t.id !== task.id));
     setCompletedTask(task);
+    setTaskList(taskList.filter((t) => t.id !== task.id));
     setCompletedTaskList([...completedTaskList, completedTask]);
   };
   const setVisible = () => setModal(true);
+
   return (
     <div className="App">
       <Header

@@ -6,7 +6,7 @@
 
 .popAp {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .popAp__content {
@@ -38,6 +38,7 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+  margin-top: 50px;
 }
 
 .popAp__title {

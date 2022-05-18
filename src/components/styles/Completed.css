@@ -13,7 +13,7 @@
 .completed {
   background-color: #38404b;
   padding: 50px 20px;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .completed__wrapper {
