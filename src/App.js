@@ -8,7 +8,7 @@ import Tasks from "./components/Tasks";
 function App() {
   const [task, setTask] = useState({ id: "", text: "" });
   const [taskList, setTaskList] = useState([]);
-  const [completedTask, setCompletedTask] = useState({ id: "", text: "" });
+  let completedTask = { id: "", text: "" };
   const [completedTaskList, setCompletedTaskList] = useState([]);
   const [modal, setModal] = useState(false);
 
@@ -27,9 +27,9 @@ function App() {
   };
 
   const completeTask = (task) => {
-    setCompletedTask(task);
-    setTaskList(taskList.filter((t) => t.id !== task.id));
+    completedTask = task;
     setCompletedTaskList([...completedTaskList, completedTask]);
+    setTaskList(taskList.filter((t) => t.id !== task.id));
   };
   const setVisible = () => setModal(true);
 
